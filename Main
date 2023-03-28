@@ -108,36 +108,36 @@
       <button type="button" onclick="calculateScores()">Submit</button>
     </form>
     <script>
-    function calculateScores() {
-        // Calculate Part 1 score
-        var part1Answers = document.querySelectorAll('.part1 input[type="radio"]:checked');
-        var part1Score = 0;
-        for (var i = 0; i < part1Answers.length; i++) {
-            part1Score += parseInt(part1Answers[i].value);
-        }
-        part1Score /= 2;
-        
-        // Calculate Part 2 score
-        var part2Answers = document.querySelectorAll('.part2 input[type="radio"]:checked');
-        var part2Score = 0;
-        for (var i = 0; i < part2Answers.length; i++) {
-            part2Score += parseInt(part2Answers[i].value);
-        }
-        part2Score /= 2;
-        
-        // Calculate Part 3 score
-        var part3Answers = document.querySelectorAll('.part3 input[type="radio"]:checked');
-        var part3Score = 0;
-        for (var i = 0; i < part3Answers.length; i++) {
-            part3Score += parseInt(part3Answers[i].value);
-        }
-        part3Score /= 2;
+  function calculateScores() {
+      // Calculate Part 1 score
+      var part1Answers = document.querySelectorAll('.part1 input[type="radio"]:checked');
+      var part1Score = 0;
+      for (var i = 0; i < part1Answers.length; i++) {
+          part1Score += parseInt(part1Answers[i].value);
+      }
+      part1Score /= 2;
+      
+      // Calculate Part 2 score
+      var part2Answers = document.querySelectorAll('.part2 input[type="radio"]:checked');
+      var part2Score = 0;
+      for (var i = 0; i < part2Answers.length; i++) {
+          part2Score += parseInt(part2Answers[i].value);
+      }
+      part2Score /= 2;
+      
+      // Calculate Part 3 score
+      var part3Answers = document.querySelectorAll('.part3 input[type="radio"]:checked');
+      var part3Score = 0;
+      for (var i = 0; i < part3Answers.length; i++) {
+          part3Score += parseInt(part3Answers[i].value);
+      }
+      part3Score /= 2;
 
-        // Display the scores on the webpage
-        document.getElementById('part1-score').innerHTML = part1Score;
-        document.getElementById('part2-score').innerHTML = part2Score;
-        document.getElementById('part3-score').innerHTML = part3Score;
-    }
+      // Display the scores on the webpage
+      document.getElementById('part1-score').innerHTML = part1Score;
+      document.getElementById('part2-score').innerHTML = part2Score;
+      document.getElementById('part3-score').innerHTML = part3Score;
+  }
 
     </script>
   </body>
