@@ -117,6 +117,54 @@
         <button type="submit" class="submit-button">Submit</button>
       </form>
     </div>
+    <script>
+
+      // Get the form element
+    const form = document.querySelector("form");
+
+    // Add a submit event listener to the form
+    form.addEventListener("submit", (event) => {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Get all the radio buttons
+      const radioButtons = form.querySelectorAll(".radio-button");
+
+      // Calculate the score for each part
+      const part1Score = calculateScore("part1", radioButtons);
+      const part2Score = calculateScore("part2", radioButtons);
+      const part3Score = calculateScore("part3", radioButtons);
+
+      // Display the results on the webpage
+      const resultsContainer = document.createElement("div");
+      resultsContainer.innerHTML = `
+        <h2>Results</h2>
+        <p>Part 1 score: ${part1Score}</p>
+        <p>Part 2 score: ${part2Score}</p>
+        <p>Part 3 score: ${part3Score}</p>
+      `;
+      form.appendChild(resultsContainer);
+    });
+
+    // Helper function to calculate the score for a part
+    function calculateScore(part, radioButtons) {
+      // Get all the selected radio buttons for the part
+      const selectedRadioButtons = Array.from(radioButtons).filter((radioButton) => {
+        return radioButton.name === part && radioButton.checked;
+      });
+
+      // Calculate the sum of the values of the selected radio buttons
+      const sum = selectedRadioButtons.reduce((accumulator, radioButton) => {
+        return accumulator + parseInt(radioButton.value);
+      }, 0);
+
+      // Calculate the score by dividing the sum by the number of questions
+      const score = sum / 4;
+
+      return score;
+    }
+
+    </script>
     <!-- Your JavaScript code here -->
 
   </body>
