@@ -1,144 +1,174 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Questionnaire</title>
+    <title>My Questionnaire</title>
     <style>
-        /* Style for the questionnaire container */
-        .questionnaire-container {
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 20px;
-          background-color: #f7f7f7;
-          border-radius: 10px;
-        }
-  
-        /* Style for the questionnaire title */
-        .questionnaire-title {
-          font-size: 24px;
-          font-weight: bold;
-          margin-bottom: 20px;
-        }
-  
-        /* Style for the question label */
-        .question-label {
-          font-size: 18px;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-  
-        /* Style for the answer label */
-        .answer-label {
-          font-size: 16px;
-          margin-left: 10px;
-        }
-  
-        /* Style for the radio button */
-        .radio-button {
-          margin-right: 10px;
-        }
-  
-        /* Style for the submit button */
-        .submit-button {
-          display: block;
-          margin: 20px auto 0;
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: #fff;
-          font-size: 18px;
-          font-weight: bold;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-  
-        /* Style for the submit button on hover */
-        .submit-button:hover {
-          background-color: #0062cc;
-        }
-  
-      </style>
+      /* Style for the questionnaire container */
+      .questionnaire-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 10px;
+      }
+
+      /* Style for the questionnaire title */
+      .questionnaire-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      /* Style for the question label */
+      .question-label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      /* Style for the answer label */
+      .answer-label {
+        font-size: 16px;
+        margin-left: 10px;
+      }
+
+      /* Style for the radio button */
+      .radio-button {
+        margin-right: 10px;
+      }
+
+      /* Style for the submit button */
+      .submit-button {
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Style for the submit button on hover */
+      .submit-button:hover {
+        background-color: #0062cc;
+      }
+
+    </style>
   </head>
   <body>
-    <h1>Questionnaire</h1>
-    <form>
-      <h2>Part 1</h2>
-      <p>1. questions?</p>
-      <input type="radio" name="part1question1" value="1">answer 1<br>
-      <input type="radio" name="part1question1" value="2">answer 2<br>
-      <input type="radio" name="part1question1" value="3">answer 3<br>
-
-      <p>2. questions?</p>
-      <input type="radio" name="part1question2" value="1">answer 1<br>
-      <input type="radio" name="part1question2" value="2">answer 2<br>
-      <input type="radio" name="part1question2" value="3">answer 3<br>
-
-      <h2>Part 2</h2>
-      <p>3. questions?</p>
-      <input type="radio" name="part2question1" value="1">answer 1<br>
-      <input type="radio" name="part2question1" value="2">answer 2<br>
-      <input type="radio" name="part2question1" value="3">answer 3<br>
-
-      <p>4. questions?</p>
-      <input type="radio" name="part2question2" value="1">answer 1<br>
-      <input type="radio" name="part2question2" value="2">answer 2<br>
-      <input type="radio" name="part2question2" value="3">answer 3<br>
-
-      <h2>Part 3</h2>
-      <p>5. questions?</p>
-      <input type="radio" name="part3question1" value="1">answer 1<br>
-      <input type="radio" name="part3question1" value="2">answer 2<br>
-      <input type="radio" name="part3question1" value="3">answer 3<br>
-
-      <p>6. questions?</p>
-      <input type="radio" name="part3question2" value="1">answer 1<br>
-      <input type="radio" name="part3question2" value="2">answer 2<br>
-      <input type="radio" name="part3question2" value="3">answer 3<br>
-
-      <h2>Part 4</h2>
-      <p>7. questions?</p>
-      <input type="radio" name="part4question1" value="1">answer 1<br>
-      <input type="radio" name="part4question1" value="2">answer 2<br>
-      <input type="radio" name="part4question1" value="3">answer 3<br>
-
-      <p>8. questions?</p>
-      <input type="radio" name="part4question2" value="1">answer 1<br>
-      <input type="radio" name="part4question2" value="2">answer 2<br>
-      <input type="radio" name="part4question2" value="3">answer 3<br>
-
-      <button type="button" onclick="calculateScores()">Submit</button>
-    </form>
+    <div class="questionnaire-container">
+      <h1 class="questionnaire-title">My Questionnaire</h1>
+      <form>
+        <!-- Part 1 -->
+        <div>
+          <label class="question-label">Part 1: questions</label>
+          <br />
+          <input type="radio" name="part1" value="1" class="radio-button" />
+          <label class="answer-label">Answer 1</label>
+          <br />
+          <input type="radio" name="part1" value="2" class="radio-button" />
+          <label class="answer-label">Answer 2</label>
+          <br />
+          <input type="radio" name="part1" value="3" class="radio-button" />
+          <label class="answer-label">Answer 3</label>
+          <br />
+          <input type="radio" name="part1" value="4" class="radio-button" />
+          <label class="answer-label">Answer 4</label>
+        </div>
+        <br />
+        <!-- Part 2 -->
+        <div>
+          <label class="question-label">Part 2: questions</label>
+          <br />
+          <input type="radio" name="part2" value="1" class="radio-button" />
+          <label class="answer-label">Answer 1</label>
+          <br />
+          <input type="radio" name="part2" value="2" class="radio-button" />
+          <label class="answer-label">Answer 2</label>
+          <br />
+          <input type="radio" name="part2" value="3" class="radio-button" />
+          <label class="answer-label">Answer 3</label>
+          <br />
+          <input type="radio" name="part2" value="4" class="radio-button" />
+          <label class="answer-label">Answer 4</label>
+        </div>
+        <br />
+        <!-- Part 3 -->
+        <div>
+          <label class="question-label">Part 3: questions</label>
+          <br />
+          <input type="radio" name="part3" value="1" class="radio-button" />
+          <label class="answer-label">Answer 1</label>
+          <br />
+          <input type="radio" name="part3" value="2" class="radio-button" />
+          <label class="answer-label">Answer 2</label>
+          <br />
+          <input type="radio" name="part3" value="3" class="radio-button" />
+          <label class="answer-label">Answer 3</label>
+          <br />
+          <input type="radio" name="part3" value="4" class="radio-button" />
+          <label class="answer-label">Answer 4</label>
+        </div>
+        <br />
+        <!-- Submit button -->
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
     <script>
-  function calculateScores() {
-      // Calculate Part 1 score
-      var part1Answers = document.querySelectorAll('.part1 input[type="radio"]:checked');
-      var part1Score = 0;
-      for (var i = 0; i < part1Answers.length; i++) {
-          part1Score += parseInt(part1Answers[i].value);
-      }
-      part1Score /= 2;
-      
-      // Calculate Part 2 score
-      var part2Answers = document.querySelectorAll('.part2 input[type="radio"]:checked');
-      var part2Score = 0;
-      for (var i = 0; i < part2Answers.length; i++) {
-          part2Score += parseInt(part2Answers[i].value);
-      }
-      part2Score /= 2;
-      
-      // Calculate Part 3 score
-      var part3Answers = document.querySelectorAll('.part3 input[type="radio"]:checked');
-      var part3Score = 0;
-      for (var i = 0; i < part3Answers.length; i++) {
-          part3Score += parseInt(part3Answers[i].value);
-      }
-      part3Score /= 2;
 
-      // Display the scores on the webpage
-      document.getElementById('part1-score').innerHTML = part1Score;
-      document.getElementById('part2-score').innerHTML = part2Score;
-      document.getElementById('part3-score').innerHTML = part3Score;
-  }
+      // Get the form element
+    const form = document.querySelector("form");
+
+    // Add a submit event listener to the form
+    form.addEventListener("submit", (event) => {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Get all the radio buttons
+      const radioButtons = form.querySelectorAll(".radio-button");
+
+      // Calculate the score for each part
+      const part1Score = calculateScore("part1", radioButtons);
+      const part2Score = calculateScore("part2", radioButtons);
+      const part3Score = calculateScore("part3", radioButtons);
+
+      // Display the results on the webpage
+      const resultsContainer = document.createElement("div");
+      resultsContainer.innerHTML = `
+        <h2>Results</h2>
+        <p>Part 1 score: ${part1Score}</p>
+        <p>Part 2 score: ${part2Score}</p>
+        <p>Part 3 score: ${part3Score}</p>
+      `;
+      form.appendChild(resultsContainer);
+    });
+
+    // Helper function to calculate the score for a part
+    function calculateScore(part, radioButtons) {
+      // Get all the selected radio buttons for the part
+      const selectedRadioButtons = Array.from(radioButtons).filter((radioButton) => {
+        return radioButton.name === part && radioButton.checked;
+      });
+
+      // Calculate the sum of the values of the selected radio buttons
+      const sum = selectedRadioButtons.reduce((accumulator, radioButton) => {
+        return accumulator + parseInt(radioButton.value);
+      }, 0);
+
+      // Calculate the score by dividing the sum by the number of questions
+      const score = sum / 4;
+
+      return score;
+    }
 
     </script>
+    <!-- Your JavaScript code here -->
+
   </body>
 </html>
+
+
